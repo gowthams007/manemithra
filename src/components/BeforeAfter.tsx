@@ -60,7 +60,7 @@ export default function BeforeAfter() {
           ref={containerRef}
           onMouseMove={handleMouseMove}
           onTouchMove={handleTouchMove}
-          className="relative w-full h-[55vh] md:h-[70vh] rounded-2xl overflow-hidden border border-brand-charcoal/10 dark:border-brand-cream/10 shadow-2xl cursor-ew-resize select-none"
+          className="relative w-full h-[40vh] md:h-[70vh] rounded-2xl overflow-hidden border border-brand-charcoal/10 dark:border-brand-cream/10 shadow-2xl cursor-ew-resize select-none touch-none"
         >
           
           {/* 1. BEFORE Panel (Left Layer - Empty / Brick House) */}
@@ -69,7 +69,7 @@ export default function BeforeAfter() {
             <div className="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:16px_16px] opacity-40" />
             
             {/* Symmetrical Left Text Card */}
-            <div className="absolute top-[8%] left-[6%] max-w-[40%] flex flex-col justify-start text-left text-zinc-400">
+            <div className="absolute top-[8%] left-[6%] max-w-[40%] hidden md:flex flex-col justify-start text-left text-zinc-400">
               <h4 className="font-serif text-xl md:text-3xl text-zinc-100 font-bold mb-3">
                 Cold, Raw & Unoptimized
               </h4>
@@ -79,7 +79,7 @@ export default function BeforeAfter() {
             </div>
 
             {/* Graphic mockup details representing "Empty" room */}
-            <div className="absolute bottom-[8%] left-[6%] w-[250px] md:w-[320px] p-6 rounded-xl border border-zinc-800 border-dashed flex flex-col space-y-2">
+            <div className="absolute bottom-[8%] left-[6%] w-[250px] md:w-[320px] hidden md:flex p-6 rounded-xl border border-zinc-800 border-dashed flex flex-col space-y-2">
               <span className="font-sans text-[10px] tracking-widest text-zinc-600 uppercase font-bold">
                 Structure Status
               </span>
@@ -99,7 +99,7 @@ export default function BeforeAfter() {
             <div className="absolute inset-0 bg-gradient-to-br from-brand-charcoal via-brand-darkgray to-brand-wood/10" />
             
             {/* Symmetrical Right Text Card - Top Stacked to avoid card overlaps */}
-            <div className="absolute top-[8%] right-[6%] max-w-[40%] flex flex-col text-right items-end text-brand-cream/80">
+            <div className="absolute top-[8%] right-[6%] max-w-[40%] hidden md:flex flex-col text-right items-end text-brand-cream/80">
               <h4 className="font-serif text-xl md:text-3xl text-brand-cream font-bold mb-3 gold-gradient-text">
                 Bespoke Architectural Luxury
               </h4>
@@ -109,7 +109,7 @@ export default function BeforeAfter() {
             </div>
 
             {/* Styled Furniture Vector representation - Bottom Stacked */}
-            <div className="absolute bottom-[8%] right-[6%] w-[250px] md:w-[320px] p-6 rounded-xl glass-panel border border-brand-cream/10 shadow-2xl flex flex-col space-y-3">
+            <div className="absolute bottom-[8%] right-[6%] w-[250px] md:w-[320px] hidden md:flex p-6 rounded-xl glass-panel border border-brand-cream/10 shadow-2xl flex flex-col space-y-3">
               <div className="flex items-center justify-between">
                 <span className="font-sans text-[10px] tracking-wider text-brand-gold uppercase font-bold">
                   Furnishing: Selected

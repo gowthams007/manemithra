@@ -341,7 +341,7 @@ export default function Contact3D() {
             
             {/* 3D Canvas */}
             <div className="w-full h-[80%] cursor-grab active:cursor-grabbing">
-              <Canvas shadows>
+              <Canvas shadows className="touch-pan-y">
                 <PerspectiveCamera makeDefault position={[3, 2.5, 4.5]} fov={35} />
                 <GlowingHouseScene activeZone={formData.projectType} />
                 <OrbitControls enableZoom={false} enablePan={false} maxPolarAngle={Math.PI / 2 - 0.1} />

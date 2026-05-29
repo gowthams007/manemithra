@@ -371,7 +371,7 @@ export default function FloorPlan3D() {
           <div className="lg:col-span-7 relative h-[50vh] md:h-[60vh] bg-brand-cream dark:bg-brand-darkgray/40 rounded-2xl border border-brand-charcoal/5 dark:border-brand-cream/5 shadow-2xl overflow-hidden group">
             
             {/* 3D Canvas */}
-            <Canvas shadows className="w-full h-full cursor-grab active:cursor-grabbing">
+            <Canvas shadows className="w-full h-full cursor-grab active:cursor-grabbing touch-pan-y">
               <PerspectiveCamera makeDefault position={[3.5, 4.5, 4.5]} fov={40} />
               <FloorPlanMeshes planType={activePlan} />
               <OrbitControls

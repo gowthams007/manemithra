@@ -27,13 +27,16 @@ function CameraController({ scroll }: { scroll: number }) {
     // 0.3 -> Kitchen
     // 0.6 -> Bedroom
     // 1.0 -> Workspace
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+    const zOffset = isMobile ? 2.5 : 0;
+
     if (scroll < 0.25) {
       // Living Room View
       const t = scroll / 0.25;
       targetPos.current.set(
         THREE.MathUtils.lerp(0, -3, t),
         THREE.MathUtils.lerp(1.8, 2.0, t),
-        THREE.MathUtils.lerp(7, 5, t)
+        THREE.MathUtils.lerp(7 + zOffset, 5 + zOffset, t)
       );
       targetLook.current.set(
         THREE.MathUtils.lerp(0, -2, t),
@@ -46,7 +49,7 @@ function CameraController({ scroll }: { scroll: number }) {
       targetPos.current.set(
         THREE.MathUtils.lerp(-3, 3, t),
         THREE.MathUtils.lerp(2.0, 2.2, t),
-        THREE.MathUtils.lerp(5, 4.5, t)
+        THREE.MathUtils.lerp(5 + zOffset, 4.5 + zOffset, t)
       );
       targetLook.current.set(
         THREE.MathUtils.lerp(-2, 2.5, t),
@@ -59,7 +62,7 @@ function CameraController({ scroll }: { scroll: number }) {
       targetPos.current.set(
         THREE.MathUtils.lerp(3, -1, t),
         THREE.MathUtils.lerp(2.2, 1.9, t),
-        THREE.MathUtils.lerp(4.5, 4, t)
+        THREE.MathUtils.lerp(4.5 + zOffset, 4 + zOffset, t)
       );
       targetLook.current.set(
         THREE.MathUtils.lerp(2.5, -0.8, t),
@@ -72,7 +75,7 @@ function CameraController({ scroll }: { scroll: number }) {
       targetPos.current.set(
         THREE.MathUtils.lerp(-1, 2, t),
         THREE.MathUtils.lerp(1.9, 1.5, t),
-        THREE.MathUtils.lerp(4, 3, t)
+        THREE.MathUtils.lerp(4 + zOffset, 3 + zOffset, t)
       );
       targetLook.current.set(
         THREE.MathUtils.lerp(-0.8, 1.8, t),

@@ -252,7 +252,7 @@ export default function DesignConfigurator3D() {
           {/* 3D Canvas Box (Left 7 Columns) */}
           <div className="lg:col-span-7 relative h-[45vh] md:h-[60vh] bg-brand-darkgray/60 rounded-2xl border border-brand-cream/5 shadow-2xl overflow-hidden group">
             
-            <Canvas shadows className="w-full h-full cursor-grab active:cursor-grabbing">
+            <Canvas shadows className="w-full h-full cursor-grab active:cursor-grabbing touch-pan-y">
               <PerspectiveCamera makeDefault position={[0.5, 2.5, 4.8]} fov={38} />
               <ConfiguratorRoomScene
                 wallColor={selectedWall.hex}

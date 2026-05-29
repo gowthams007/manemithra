@@ -54,6 +54,18 @@ export default function Navbar() {
     }
   };
 
+  // Prevent background body scrolling on mobile when drawer is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   const navItems = [
     { name: "Home", href: "#home", icon: Home },
     { name: "Services", href: "#services", icon: Compass },
@@ -199,7 +211,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 top-[70px] bg-brand-cream dark:bg-brand-charcoal z-40 lg:hidden overflow-y-auto"
+            className="fixed inset-0 bg-brand-cream dark:bg-brand-charcoal z-40 lg:hidden overflow-y-auto pt-24"
           >
             <div className="px-8 py-12 flex flex-col space-y-6">
               {navItems.map((item) => (
