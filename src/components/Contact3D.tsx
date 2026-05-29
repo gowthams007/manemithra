@@ -224,7 +224,7 @@ export default function Contact3D() {
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     onFocus={() => setActiveZone("kitchen")}
                     className="w-full bg-brand-charcoal border border-brand-cream/10 rounded px-4 py-3.5 text-sm font-sans focus:outline-none focus:border-brand-gold transition-colors duration-200"
-                    placeholder="e.g. +91 98765 43210"
+                    placeholder="e.g. +91 78290 60952"
                   />
                 </div>
 

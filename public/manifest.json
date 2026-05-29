@@ -1,0 +1,18 @@
+{
+  "name": "Mane Mithra | Interior & Designer",
+  "short_name": "Mane Mithra",
+  "description": "Bangalore's leading premium interior design studio.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

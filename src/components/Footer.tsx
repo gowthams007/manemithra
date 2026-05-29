@@ -113,13 +113,13 @@ export default function Footer() {
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
                 <span className="text-brand-cream/70 leading-relaxed">
-                  #42, 3rd Floor, Luxury Avenue, Near Metro Station, Indiranagar, Bangalore, Karnataka - 560038
+                  #70/A, D Group Layout, Andrahalli, Bangalore, Karnataka - 560091
                 </span>
               </li>
               <li className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-brand-gold" />
-                <a href="tel:+919876543210" className="text-brand-cream/70 hover:text-brand-gold transition-colors">
-                  +91 98765 43210
+                <a href="tel:+917829060952" className="text-brand-cream/70 hover:text-brand-gold transition-colors">
+                  +91 78290 60952
                 </a>
               </li>
               <li className="flex items-center space-x-3">
@@ -161,15 +161,16 @@ export default function Footer() {
             "priceRange": "$$$$",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "#70/A, D Group Layout,  Andrahalli",
+              "streetAddress": "#70/A, D Group Layout, Andrahalli",
               "addressLocality": "Bangalore",
+              "addressRegion": "Karnataka",
               "postalCode": "560091",
               "addressCountry": "IN"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": 12.971598,
-              "longitude": 77.594562
+              "latitude": 12.9845,
+              "longitude": 77.4952
             },
             "openingHoursSpecification": {
               "@type": "OpeningHoursSpecification",

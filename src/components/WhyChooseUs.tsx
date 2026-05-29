@@ -26,7 +26,7 @@ export default function WhyChooseUs() {
     {
       title: "4. Material Selection",
       subtitle: "Ultra-Premium Finish Curation",
-      description: "Join us at our Indiranagar design studio to touch and select materials. Formica laminates, marine plywoods, marble slabs, and custom fabrics.",
+      description: "Join us at our design studio to touch and select materials. Formica laminates, marine plywoods, marble slabs, and custom fabrics.",
       icon: BoxSelect,
     },
     {
