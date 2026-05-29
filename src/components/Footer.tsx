@@ -138,6 +138,9 @@ export default function Footer() {
           <p>
             &copy; {currentYear} Mane Mithra Interior & Designer. All rights reserved.
           </p>
+          <p className="text-[10px] tracking-widest uppercase font-medium text-brand-gold/60">
+            Crafted by <span className="text-brand-cream font-semibold">Gowtham S</span> &amp; <span className="text-brand-cream font-semibold">Pramod S</span>
+          </p>
           <div className="flex space-x-6">
             <a href="#" className="hover:text-brand-gold transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-brand-gold transition-colors">Terms of Service</a>

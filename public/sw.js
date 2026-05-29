@@ -1,4 +1,4 @@
-const CACHE_NAME = "manemithra-cache-v2";
+const CACHE_NAME = "manemithra-cache-v3";
 const ASSETS = [
   "/",
   "/manifest.json",

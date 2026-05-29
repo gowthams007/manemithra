@@ -130,33 +130,25 @@ function HolographicMemberCard({
 export default function Team() {
   const members = [
     {
-      name: "Siddharth Gowda",
-      role: "Principal Architect",
-      philosophy: "Architecture is not just about placing lines on paper, it's about choreographing light, circulation, and modern human lifestyle.",
-      exp: "12+ Years Exp",
-      avatarInitials: "SG",
+      name: "Gowtham S",
+      role: "Co-Founder & Lead Designer",
+      philosophy: "Interior design is not just about aesthetics; it is about creating a space that acts as your friend—Mane Mithra. We sculpt functional, breathing luxury.",
+      exp: "Founder",
+      avatarInitials: "GS",
       icon: Sparkles,
     },
     {
-      name: "Rhea Sen",
-      role: "Lead Modular Planner",
-      philosophy: "A kitchen is the heart of a home. It should possess high-grade structural mechanics and feel completely elegant in its clean lines.",
-      exp: "8+ Years Exp",
-      avatarInitials: "RS",
-      icon: Box,
-    },
-    {
-      name: "Karan Hegde",
-      role: "Execution Specialist",
-      philosophy: "We operate on tolerances of under a millimeter. Execution quality is what separates standard projects from premium architecture.",
-      exp: "10+ Years Exp",
-      avatarInitials: "KH",
-      icon: Milestone,
+      name: "Pramod S",
+      role: "Co-Founder & Technical Director",
+      philosophy: "We integrate state-of-the-art 3D visualizations and engineering tolerances of under a millimeter to execute spaces that match renders perfectly.",
+      exp: "Founder",
+      avatarInitials: "PS",
+      icon: ShieldCheck,
     },
   ];
 
   return (
-    <section id="team" className="py-20 md:py-32 bg-[#F9F7F4] dark:bg-brand-charcoal transition-colors duration-300 relative overflow-hidden">
+    <section id="team" className="py-20 md:py-32 bg-brand-cream dark:bg-brand-charcoal transition-colors duration-300 relative overflow-hidden">
       
       {/* Background graphic elements */}
       <div className="absolute top-1/2 left-0 w-80 h-80 rounded-full bg-brand-wood/5 blur-[120px] pointer-events-none" />
@@ -169,15 +161,15 @@ export default function Team() {
             Design Studio Creators
           </span>
           <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-wide text-brand-charcoal dark:text-brand-cream">
-            Our Master Minds
+            Our Masterminds
           </h2>
           <p className="font-sans text-sm md:text-base text-brand-charcoal/60 dark:text-brand-cream/60 mt-4 max-w-xl mx-auto">
-            Meet the architects, modular kitchen craftsmen, and high-tolerance project execution engineers that drive the Mane Mithra premium standard.
+            Meet the visionary creators behind Mane Mithra, driving high-end architectural aesthetics and millimeter-accurate custom engineering.
           </p>
         </div>
 
-        {/* Team Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        {/* Team Grid (Centered 2-Column layout for Founders) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {members.map((member, index) => (
             <HolographicMemberCard
               key={member.name}
