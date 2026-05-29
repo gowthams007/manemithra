@@ -100,12 +100,12 @@ export default function Navbar() {
           </a>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden lg:flex items-center space-x-8">
+          <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
             {navItems.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className={`relative text-sm tracking-widest font-sans uppercase font-medium transition-colors duration-300 py-2 group ${
+                className={`relative text-xs xl:text-sm tracking-widest font-sans uppercase font-medium transition-colors duration-300 py-2 whitespace-nowrap group ${
                   scrolled
                     ? "text-brand-charcoal/70 dark:text-brand-cream/70 hover:text-brand-charcoal dark:hover:text-brand-cream"
                     : "text-brand-cream/80 hover:text-brand-gold"
