@@ -3,7 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import * as THREE from "three";
 
 // Three.js component that controls the drop-in animation based on scroll progress
@@ -211,59 +211,79 @@ export default function ScrollStory() {
 
             {/* Height set to h-40/h-48 to completely eliminate character clipping across all viewports */}
             <div className="relative h-40 md:h-48 overflow-hidden">
-              
-              {/* Headline 1 */}
-              <motion.div
-                style={{ opacity: textOpacity1, y: textY1 }}
-                className="absolute inset-0 flex flex-col justify-start"
-              >
-                <h3 className="font-serif text-3xl md:text-4xl font-bold tracking-wide text-brand-charcoal dark:text-brand-cream">
-                  Watch Your Dream Home Come To Life
-                </h3>
-                <p className="font-sans text-xs md:text-sm text-brand-charcoal/60 dark:text-brand-cream/60 mt-3 leading-relaxed">
-                  It all begins with an empty grid. We lay the foundations of elegant structure with ultra-premium wood floor finishes.
-                </p>
-              </motion.div>
+              <AnimatePresence mode="wait">
+                {scrollVal < 0.22 && (
+                  <motion.div
+                    key="headline-1"
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -15 }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute inset-0 flex flex-col justify-start"
+                  >
+                    <h3 className="font-serif text-3xl md:text-4xl font-bold tracking-wide text-brand-charcoal dark:text-brand-cream">
+                      Watch Your Dream Home Come To Life
+                    </h3>
+                    <p className="font-sans text-xs md:text-sm text-brand-charcoal/60 dark:text-brand-cream/60 mt-3 leading-relaxed">
+                      It all begins with an empty grid. We lay the foundations of elegant structure with ultra-premium wood floor finishes.
+                    </p>
+                  </motion.div>
+                )}
 
-              {/* Headline 2 */}
-              <motion.div
-                style={{ opacity: textOpacity2, y: textY2 }}
-                className="absolute inset-0 flex flex-col justify-start"
-              >
-                <h3 className="font-serif text-3xl md:text-4xl font-bold tracking-wide text-brand-charcoal dark:text-brand-cream">
-                  Injecting Structural Grace
-                </h3>
-                <p className="font-sans text-xs md:text-sm text-brand-charcoal/60 dark:text-brand-cream/60 mt-3 leading-relaxed">
-                  Next, clean structural panels slide into place. The primary charcoal color palettes form walls of elegance.
-                </p>
-              </motion.div>
+                {scrollVal >= 0.22 && scrollVal < 0.48 && (
+                  <motion.div
+                    key="headline-2"
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -15 }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute inset-0 flex flex-col justify-start"
+                  >
+                    <h3 className="font-serif text-3xl md:text-4xl font-bold tracking-wide text-brand-charcoal dark:text-brand-cream">
+                      Injecting Structural Grace
+                    </h3>
+                    <p className="font-sans text-xs md:text-sm text-brand-charcoal/60 dark:text-brand-cream/60 mt-3 leading-relaxed">
+                      Next, clean structural panels slide into place. The primary charcoal color palettes form walls of elegance.
+                    </p>
+                  </motion.div>
+                )}
 
-              {/* Headline 3 */}
-              <motion.div
-                style={{ opacity: textOpacity3, y: textY3 }}
-                className="absolute inset-0 flex flex-col justify-start"
-              >
-                <h3 className="font-serif text-3xl md:text-4xl font-bold tracking-wide text-brand-charcoal dark:text-brand-cream">
-                  Modular Handcrafted Furniture
-                </h3>
-                <p className="font-sans text-xs md:text-sm text-brand-charcoal/60 dark:text-brand-cream/60 mt-3 leading-relaxed">
-                  Bespoke, multi-functional consoles and cabinetry drop in. Space is maximized and modular efficiency is born.
-                </p>
-              </motion.div>
+                {scrollVal >= 0.48 && scrollVal < 0.72 && (
+                  <motion.div
+                    key="headline-3"
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -15 }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute inset-0 flex flex-col justify-start"
+                  >
+                    <h3 className="font-serif text-3xl md:text-4xl font-bold tracking-wide text-brand-charcoal dark:text-brand-cream">
+                      Modular Handcrafted Furniture
+                    </h3>
+                    <p className="font-sans text-xs md:text-sm text-brand-charcoal/60 dark:text-brand-cream/60 mt-3 leading-relaxed">
+                      Bespoke, multi-functional consoles and cabinetry drop in. Space is maximized and modular efficiency is born.
+                    </p>
+                  </motion.div>
+                )}
 
-              {/* Headline 4 */}
-              <motion.div
-                style={{ opacity: textOpacity4, y: textY4 }}
-                className="absolute inset-0 flex flex-col justify-start"
-              >
-                <h3 className="font-serif text-3xl md:text-4xl font-bold tracking-wide text-brand-charcoal dark:text-brand-cream">
-                  Warm Ambient Lighting & Accents
-                </h3>
-                <p className="font-sans text-xs md:text-sm text-brand-charcoal/60 dark:text-brand-cream/60 mt-3 leading-relaxed">
-                  Finally, the smart ambient lighting fires up. Gold design trim highlights glow, and decor transforms a house into a warm home.
-                </p>
-              </motion.div>
-
+                {scrollVal >= 0.72 && (
+                  <motion.div
+                    key="headline-4"
+                    initial={{ opacity: 0, y: 15 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -15 }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute inset-0 flex flex-col justify-start"
+                  >
+                    <h3 className="font-serif text-3xl md:text-4xl font-bold tracking-wide text-brand-charcoal dark:text-brand-cream">
+                      Warm Ambient Lighting & Accents
+                    </h3>
+                    <p className="font-sans text-xs md:text-sm text-brand-charcoal/60 dark:text-brand-cream/60 mt-3 leading-relaxed">
+                      Finally, the smart ambient lighting fires up. Gold design trim highlights glow, and decor transforms a house into a warm home.
+                    </p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
 
             {/* Scroll Indicator Inside Panel */}

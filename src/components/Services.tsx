@@ -59,7 +59,7 @@ function ServiceCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6, delay: index * 0.05 }}
-      className="relative flex flex-col justify-between p-8 rounded-xl glass-panel border border-brand-charcoal/10 dark:border-brand-cream/10 hover:border-brand-gold/60 dark:hover:border-brand-gold/60 cursor-pointer shadow-xl transition-shadow hover:shadow-2xl h-[280px] group overflow-hidden"
+      className="relative flex flex-col justify-between p-8 rounded-xl bg-white dark:bg-brand-darkgray/60 border border-brand-charcoal/5 dark:border-brand-cream/5 hover:border-brand-gold/60 dark:hover:border-brand-gold/60 cursor-pointer shadow-xl transition-all duration-300 h-[280px] group overflow-hidden"
     >
       {/* Glow highlight behind card */}
       <div className="absolute -inset-px bg-gradient-to-br from-transparent via-brand-gold/0 to-brand-gold/30 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />

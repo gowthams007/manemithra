@@ -42,7 +42,7 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <link rel="apple-touch-icon" href="/icon.svg" />
       </head>
-      <body className="min-h-full flex flex-col bg-[#F9F7F4] text-[#1A1A1A] selection:bg-[#D4AF37]/30 selection:text-[#111827]">
+      <body className="min-h-full flex flex-col bg-[#F9F7F4] dark:bg-brand-charcoal text-[#1A1A1A] dark:text-[#F9F7F4] selection:bg-brand-gold/30 selection:text-brand-charcoal dark:selection:text-brand-cream transition-colors duration-300">
         {children}
 
         {/* Inline PWA Service Worker Registration */}

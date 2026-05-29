@@ -108,7 +108,7 @@ export default function Testimonials3D() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.15 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className="relative p-8 rounded-2xl bg-brand-cream dark:bg-brand-darkgray/80 border border-brand-charcoal/5 dark:border-brand-cream/5 flex flex-col justify-between h-[360px] shadow-2xl group hover:border-brand-gold/40 transition-all duration-300"
+              className="relative p-8 rounded-2xl bg-white dark:bg-brand-darkgray/80 border border-brand-charcoal/5 dark:border-brand-cream/5 flex flex-col justify-between h-[360px] shadow-2xl group hover:border-brand-gold/40 transition-all duration-300"
             >
               
               {/* Top Details */}

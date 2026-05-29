@@ -98,7 +98,7 @@ export default function WhyChooseUs() {
                     transition={{ duration: 0.6, delay: 0.1 }}
                     className="w-full md:w-1/2 pl-24 md:pl-0 md:px-12"
                   >
-                    <div className="bg-brand-cream dark:bg-brand-darkgray p-8 rounded-xl border border-brand-charcoal/5 dark:border-brand-cream/5 shadow-xl hover:shadow-2xl hover:border-brand-gold/40 transition-all duration-300">
+                    <div className="bg-white dark:bg-brand-darkgray p-8 rounded-xl border border-brand-charcoal/5 dark:border-brand-cream/5 shadow-xl hover:shadow-2xl hover:border-brand-gold/40 transition-all duration-300">
                       
                       <span className="font-serif text-lg font-bold text-brand-wood dark:text-brand-gold block mb-1">
                         {step.title}
